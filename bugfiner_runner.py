@@ -33,7 +33,7 @@ OUTPUT_DIR = "./Mini_projects/"
 REPORT_DIR = "./bug_reports/"
 TEST_NAME_DEFAULT = "LoginButton_Disappears_FailedAttempt"
 LOCAL_HTML_DEFAULT = "http://localhost:8000/login.html"
-Gemini_api_key="AIzaSyA5hnjXwU0QfBkc7JMJbQ-izK1dwX_qG8E"
+Gemini_api_key="Enter_API_Key_here"
 GEMINI_API_KEY = Gemini_api_key
 VIDEO_SIZE = {"width": 1280, "height": 720}
 HEADLESS_DEFAULT = True
@@ -842,4 +842,5 @@ async def main():
         
 if __name__ == "__main__":
     asyncio.run(main())
+
 

@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app  # Mount the project directory to see live code changes
+      - bugfiner-data:/app/Mini_projects  # Persistent storage for screenshots and videos
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/
+      - GEMINI_API_KEY=${GEMINI_API_KEY} # Use an environment variable for security
+
+  mongo:
+    image: mongo:4.4
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  bugfiner-data:
+  mongo-data:
